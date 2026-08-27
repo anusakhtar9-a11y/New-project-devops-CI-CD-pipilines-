@@ -25,7 +25,8 @@ jobs:
     - name: Build and Push Docker Image
       uses: docker/build-push-action@v5
       with:
-        context: .
+        context: ./"S3 static website hosting file (1)/static-website-example-master" # Apne subfolder ka path yahan dein
+        file: ./"S3 static website hosting file (1)/static-website-example-master"/Dockerfile
         push: true
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/my-web-app:latest
 
